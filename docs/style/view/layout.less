@@ -1,0 +1,39 @@
+.layout {
+    width: 100%;
+
+    >header {
+        max-width      : 1240px;
+        display        : flex;
+        justify-content: flex-start;
+        margin         : auto;
+        border-bottom  : 1px solid #ccc;
+
+        >img {
+            width: 64px;
+        }
+    }
+
+    >main {
+        max-width      : 1240px;
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        margin         : auto;
+        padding        : 32px 0px;
+    }
+
+    >footer {
+        display        : flex;
+        justify-content: center;
+        align-items    : center;
+        font-size      : 12px;
+        border-top     : 1px solid #ccc;
+        max-width      : 1240px;
+        margin         : auto;
+
+        >.footer-container {
+            font-weight: 300;
+            padding    : 20px 0px;
+        }
+    }
+}

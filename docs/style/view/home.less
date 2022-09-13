@@ -1,0 +1,95 @@
+.home-view {
+    >.title-container {
+        >h2 {
+            font-size  : 20px;
+            font-weight: 600;
+        }
+
+        >p {
+            margin-top : 16px;
+            font-size  : 14px;
+            font-weight: 400;
+            line-height: 1.2rem;
+        }
+    }
+
+    >.content {
+        >ul {
+            margin-top : 16px;
+            display    : flex;
+            align-items: center;
+            color      : #767676;
+            font-size  : 12px;
+            list-style : none;
+            padding    : 0;
+
+            >li {
+                display    : flex;
+                align-items: center;
+
+                >img {
+                    width       : 24px;
+                    margin-right: 2px;
+                }
+
+                >span {
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        >table {
+            margin-top: 8px;
+            border    : 1px solid #dadce0;
+
+            >thead {
+                display       : table-header-group;
+                vertical-align: middle;
+                overflow      : auto;
+
+                >tr {
+                    border-bottom: 1px solid #dadce0;
+
+                    >th {
+                        vertical-align  : middle;
+                        background-color: #fff;
+                        border-left     : 1px solid #dadce0;
+                        border-right    : 1px solid #dadce0;
+                        padding         : 0px 20px;
+                        left            : 0;
+                        height          : 56px;
+                        text-align      : left;
+                        font-weight     : 600;
+                    }
+                }
+            }
+
+            >tbody {
+                >tr {
+                    >th {
+                        vertical-align  : middle;
+                        background-color: #fff;
+                        border-left     : 1px solid #dadce0;
+                        border-right    : 1px solid #dadce0;
+                        padding         : 0px 20px;
+                        left            : 0;
+                        height          : 36px;
+                        text-align      : left;
+                        font-weight     : 400;
+                    }
+
+                    >td {
+                        display        : flex;
+                        align-items    : center;
+                        justify-content: center;
+                        height         : 36px;
+
+                        >img {
+                            height: 28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
