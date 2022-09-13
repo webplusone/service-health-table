@@ -1,5 +1,6 @@
 import { DomNode, el } from "skydapp-browser";
 import { View, ViewParams } from "skydapp-common";
+import Klaytn from "../klaytn/Klaytn";
 import Layout from "./Layout";
 
 export default class Home implements View {
@@ -7,6 +8,7 @@ export default class Home implements View {
     private container: DomNode;
     private interval: any;
 
+    private eventTrackerHealth: DomNode;
 
     constructor() {
         Layout.current.title = "Home";
@@ -36,18 +38,31 @@ export default class Home implements View {
                     el("thead",
                         el("tr",
                             el("th", "Products"),
-                            el("th", "Multi-regions"),
+                            el("th", "Health"),
                         ),
                     ),
                     el("tbody",
                         el("tr",
-                            el("th", "CAP"),
-                            el("td", el("img", { src: "/images/logo/available.svg", alt: "Available" })),
+                            el("th", "Event Tracker"),
+                            this.eventTrackerHealth = el("td", "..."),
                         ),
                     ),
                 ),
             ),
         ));
+
+        this.load();
+    }
+
+    public async load() {
+        const result = await fetch("https://event-tracker.webplusone.com/lastblock/klaytn");
+        const block = parseInt(await result.text(), 10);
+        const block2 = await Klaytn.loadBlockNumber();
+        if (block2 - block > 3) {
+            this.eventTrackerHealth.empty().append(el("img", { src: "/images/logo/affected.svg", alt: "Available" }));
+        } else {
+            this.eventTrackerHealth.empty().append(el("img", { src: "/images/logo/available.svg", alt: "Available" }));
+        }
     }
 
     public changeParams(params: ViewParams, uri: string): void { }
