@@ -16,7 +16,7 @@ export default class Home implements View {
             el(".title-container",
                 el("h2", "Service Health"),
                 el("p", "This page provides status information on the services that are part of WebplusOne Server. Check back here to view the current status of the services listed below. If you are experiencing an issue not listed here, please ",
-                    el("a", "contact Support.", { href: "", target: "_blank" }),
+                    el("a", "contact Support.", { href: "https://discord.gg/SbEHwpbmGu", target: "_blank" }),
                 )
             ),
             el(".content",

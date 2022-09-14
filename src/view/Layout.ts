@@ -19,7 +19,8 @@ export default class Layout implements View {
                 el("main", (this.content = el(".content"))),
                 el("footer",
                     el(".footer-container",
-                        el(".copyright", "ⓒ WebplusOne. - Last updated: 2022-09-15 00:00:00 KRT "),
+                        // el(".copyright", "ⓒ WebplusOne. - Last updated: 2022-09-15 00:00:00 KRT "),
+                        el(".copyright", "ⓒ WebplusOne."),
                     ),
                 ),
             )
